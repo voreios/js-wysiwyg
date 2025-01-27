@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Editor de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="editor-container">
+        <div id="toolbar">
+            <button data-command="bold"><b>B</b></button>
+            <button data-command="italic"><i>I</i></button>
+            <button data-command="underline"><u>U</u></button>
+            <button data-command="strikethrough"><s>S</s></button>
+            <button data-command="subscript">x<sub class="azul">2</sub></button>
+            <button data-command="superscript">x<sup class="azul">2</sup></button>
+
+            <button  data-command="justifyLeft">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="20" height="20" viewBox="0 0 32 32"><path d="M 3 7 L 3 9 L 29 9 L 29 7 Z M 3 11 L 3 13 L 21 13 L 21 11 Z M 3 15 L 3 17 L 29 17 L 29 15 Z M 3 19 L 3 21 L 21 21 L 21 19 Z M 3 23 L 3 25 L 29 25 L 29 23 Z"/></svg>
+            </button>
+            <button data-command="justifyCenter">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="20" height="20" viewBox="0 0 32 32"><path d="M 3 7 L 3 9 L 29 9 L 29 7 Z M 7 11 L 7 13 L 25 13 L 25 11 Z M 3 15 L 3 17 L 29 17 L 29 15 Z M 7 19 L 7 21 L 25 21 L 25 19 Z M 3 23 L 3 25 L 29 25 L 29 23 Z"/></svg>
+            </button>
+            <button data-command="justifyRight">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="20px" height="20" viewBox="0 0 32 32"><path d="M 3 7 L 3 9 L 29 9 L 29 7 Z M 11 11 L 11 13 L 29 13 L 29 11 Z M 3 15 L 3 17 L 29 17 L 29 15 Z M 11 19 L 11 21 L 29 21 L 29 19 Z M 3 23 L 3 25 L 29 25 L 29 23 Z"/></svg>
+            </button>
+
+            
+            <label for="foreColor">A</label>
+            <input type="color" id="foreColor" data-command="foreColor" />
+
+            <label for="backColor">✏️</label>
+            <input type="color" id="backColor" data-command="backColor" />
+
+
+            <label for="formatBlock">Block: </label>
+            <select id="formatBlock" data-command="formatBlock">
+                <option value="H1">H1</option>
+                <option value="H1">H2</option>
+                <option value="H1">H3</option>
+                <option value="H1">H4</option>
+                <option value="H1">H5</option>
+                <option value="H1">H6</option>
+                <option value="P" selected>P</option>
+                <option value="PRE">PRE</option>
+                <option value="ADDRESS">ADDRESS</option>
+            </select>
+        </div>
+        <div id="editor" contenteditable="true"></div>
+    </div>
+
+
+    
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
